@@ -1,0 +1,10 @@
+# test
+POST http://127.0.0.1:8000/user/sign-up
+Content-Type: "application/json"
+
+{
+  "Passport": "string",
+  "Password": "123456",
+  "Password2": "123456",
+  "Nickname": "mrc"
+}

@@ -9,6 +9,7 @@ import (
 	"github.com/gogf/gf/v2/os/gcmd"
 
 	"github.com/gogf/gf-demo-user/v2/internal/consts"
+	"github.com/gogf/gf-demo-user/v2/internal/controller/goods"
 	"github.com/gogf/gf-demo-user/v2/internal/controller/user"
 	"github.com/gogf/gf-demo-user/v2/internal/service"
 )
@@ -30,10 +31,12 @@ var (
 				)
 				// Register route handlers.
 				var (
-					userCtrl = user.NewV1()
+					userCtrl  = user.NewV1()
+					goodsCtrl = goods.NewV1()
 				)
 				group.Bind(
 					userCtrl,
+					goodsCtrl,
 				)
 				// Special handler that needs authentication.
 				group.Group("/", func(group *ghttp.RouterGroup) {
